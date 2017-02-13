@@ -1,0 +1,20 @@
+{
+    "name": "bluora/php-virtualmin-api",
+    "description": "Provides an interface for accessing Virtualmin's API",
+    "keywords": ["Virtualmin", "php", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@hnh.digital"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluora\\Virtualmin\\": "src/"
+        }
+    }
+}
