@@ -2,7 +2,7 @@
 
 namespace Bluora\Virtualmin\VirtualServers;
 
-use Virtualmin\VirtualminClient;
+use Bluora\Virtualmin\VirtualminClient;
 
 class VirtualServersClient extends VirtualminClient
 {
@@ -109,6 +109,7 @@ class VirtualServersClient extends VirtualminClient
     {
         $parameters = [];
         $parameters['domain'] = $domain;
+        $parameters['pass'] = $password;
 
         foreach ($this->create_domain_options as $key) {
             if (!empty($options[$key])) {
@@ -197,7 +198,7 @@ class VirtualServersClient extends VirtualminClient
      *
      * @return integer
      */
-    public function deleteDomain($domain)
+    public function delete($domain)
     {
         $parameters = [];
         $parameters['domain'] = $domain;
@@ -214,7 +215,7 @@ class VirtualServersClient extends VirtualminClient
      *
      * @return integer
      */
-    public function deleteDomainByUser($user)
+    public function deleteByUser($user)
     {
         $parameters = [];
         $parameters['user'] = $user;
@@ -231,7 +232,7 @@ class VirtualServersClient extends VirtualminClient
      *
      * @return integer
      */
-    public function removeDomainFromVirtualmin($domain)
+    public function removeFromVirtualmin($domain)
     {
         $parameters = [];
         $parameters['domain'] = $domain;
@@ -249,7 +250,7 @@ class VirtualServersClient extends VirtualminClient
      *
      * @return integer
      */
-    public function removeDomainByUserFromVirtualmin($user)
+    public function removeByUserFromVirtualmin($user)
     {
         $parameters = [];
         $parameters['user'] = $user;
@@ -267,7 +268,7 @@ class VirtualServersClient extends VirtualminClient
      *
      * @return integer
      */
-    public function disableDomain($domain, $why = '')
+    public function disable($domain, $why = '')
     {
         $parameters = [];
         $parameters['domain'] = $domain;
