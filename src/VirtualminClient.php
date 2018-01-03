@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\Virtualmin;
+namespace HnhDigital\Virtualmin;
 
 use GuzzleHttp\Client as Guzzle;
 

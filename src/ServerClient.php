@@ -1,8 +1,7 @@
 <?php
 
-namespace Bluora\Virtualmin\Server;
+namespace HnhDigital\Virtualmin;
 
-use Bluora\Virtualmin\VirtualminClient;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 

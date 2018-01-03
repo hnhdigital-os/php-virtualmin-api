@@ -1,8 +1,6 @@
 <?php
 
-namespace Bluora\Virtualmin\VirtualServers;
-
-use Bluora\Virtualmin\VirtualminClient;
+namespace HnhDigital\Virtualmin;
 
 class VirtualServersClient extends VirtualminClient
 {
