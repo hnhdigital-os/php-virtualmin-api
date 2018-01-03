@@ -13,6 +13,15 @@ class VirtualminClient
     private $mode = 'https';
     private $port = '10000';
 
+    /**
+     * Create a new client connection.
+     *
+     * @param string $server
+     * @param string $username
+     * @param string $password
+     *
+     * @return VirtualminClient
+     */
     public function __construct($server, $username, $password)
     {
         $this->server = $server;
@@ -22,6 +31,14 @@ class VirtualminClient
         return $this;
     }
 
+    /**
+     * Create the call to the remote server.
+     *
+     * @param string $program
+     * @param array $parameters
+     * 
+     * @return mixed
+     */
     protected function call($program, $parameters = [])
     {
         $url = sprintf('%s://%s:%s/virtual-server/remote.cgi?program=%s&json=1', $this->mode, $this->server, $this->port, $program);

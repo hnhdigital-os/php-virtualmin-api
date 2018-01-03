@@ -7,7 +7,11 @@ use Symfony\Component\Yaml\Yaml;
 
 class ServerClient extends VirtualminClient
 {
-
+    /**
+     * Get the info from the client.
+     *
+     * @return array
+     */
     public function info()
     {
         $parameters = [];
@@ -23,6 +27,11 @@ class ServerClient extends VirtualminClient
         return $parsed_data;
     }
 
+    /**
+     * Get the IP address from the server.
+     *
+     * @return string
+     */
     public function ip()
     {
         $parameters = [];
@@ -30,5 +39,4 @@ class ServerClient extends VirtualminClient
 
         return $this->call('list-shared-addresses', $parameters);
     }
-
 }
