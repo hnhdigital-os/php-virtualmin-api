@@ -4,6 +4,19 @@ namespace HnhDigital\Virtualmin;
 
 class VirtualServersClient extends VirtualminClient
 {
+    /**
+     * Call the parent constructor and give it the necessary authentication details.
+     * Since this class is effectively a Client of the VirtualServersClient it needs to pass
+     * the authentication details given by the user to the "Server" of this Client, in order for it to work.
+     *
+     * @param string $server
+     * @param string $username
+     * @param string $password
+     */
+    public function __construct(string $server, string $username, string $password)
+    {
+        parent::__construct($server, $username, $password);
+    }
 
     /**
      * Clone Domain.
